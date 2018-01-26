@@ -8,7 +8,7 @@ public class Test {
     public static void main(String[] args){
         try{
             Thread.sleep(5000);
-            System.out.println("modified");
+            System.out.println("modified2");
         }catch (InterruptedException e){
             e.printStackTrace();
         }
