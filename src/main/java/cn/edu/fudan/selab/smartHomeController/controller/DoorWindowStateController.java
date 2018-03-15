@@ -19,13 +19,19 @@ public class DoorWindowStateController {
     @RequestMapping(value = Parameters.doorWindowStateApiString, method = RequestMethod.GET)
     public String index(){
 
+        //进行逻辑演绎部分
         DoorWindowStateReasoning.execute();
+
         return "DoorWindowStateController called.";
     }
 
-    @RequestMapping(value = { "/labFullClosed" }, method = RequestMethod.GET)
+    @RequestMapping(value = { Parameters.doorWindowStateApiString_iffullclosed }, method = RequestMethod.GET)
     @ResponseBody
     public String get_labFullClosed() {
+
+        DoorWindowStateReasoning.execute();
+
+
         JSONObject resultObj = new JSONObject();
         JSONArray arr = new JSONArray();
         arr.add("labFullClosed");

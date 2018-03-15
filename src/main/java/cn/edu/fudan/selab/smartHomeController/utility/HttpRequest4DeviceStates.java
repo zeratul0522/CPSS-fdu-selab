@@ -32,6 +32,7 @@ public class HttpRequest4DeviceStates {
             httpURLConnection.setRequestProperty("Content-Type", "application/json");
             //建立到远程对象的实际连接
             httpURLConnection.connect();
+
             //返回打开连接读取的输入流，输入流转化为StringBuffer类型，这一套流程要记住，常用
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
             String line = null;

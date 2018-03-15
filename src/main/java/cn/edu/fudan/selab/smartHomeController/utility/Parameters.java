@@ -12,6 +12,7 @@ public class Parameters {
 
     public static final String paperStateApiString = "/smartLab/paperState";
     public static final String doorWindowStateApiString = "/smartLab/doorWindowState";
+    public static final String doorWindowStateApiString_iffullclosed = "/smartLab/iffullclosed";
     public static final String ifEmptyRoomApiString = "/smartLab/ifEmptyRoom";
 
     /*
