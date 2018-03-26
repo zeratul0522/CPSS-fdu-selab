@@ -28,15 +28,11 @@ public class DoorWindowStateController {
     @RequestMapping(value = { Parameters.doorWindowStateApiString_iffullclosed }, method = RequestMethod.GET)
     @ResponseBody
     public String get_labFullClosed() {
-
         DoorWindowStateReasoning.execute();
-
-
         JSONObject resultObj = new JSONObject();
         JSONArray arr = new JSONArray();
         arr.add("labFullClosed");
         arr.add(Parameters.labFullClosed);
         return "labFullClosed(" + arr.toString() + ")";
     }
-
 }

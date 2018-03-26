@@ -4,6 +4,10 @@ import cn.edu.fudan.selab.smartHomeController.utility.HttpRequest4DeviceStates;
 import cn.edu.fudan.selab.smartHomeController.utility.Parameters;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.JSONArray;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 
 import java.util.ArrayList;
@@ -34,4 +38,14 @@ public class DoorWindowStateReasoning {
             Parameters.labFullClosed = 1;
         }
     }
+
+//    @RequestMapping(value = { "/labFullClosed" }, method = RequestMethod.GET)
+//    @ResponseBody
+//    public String get_labFullClosed() {
+//        JSONObject resultObj = new JSONObject();
+//        JSONArray arr = new JSONArray();
+//        arr.add("labFullClosed");
+//        arr.add(Parameters.labFullClosed);
+//        return "labFullClosed(" + arr.toString() + ")";
+//    }
 }

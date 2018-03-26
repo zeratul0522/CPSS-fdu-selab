@@ -14,6 +14,8 @@ public class Parameters {
     public static final String doorWindowStateApiString = "/smartLab/doorWindowState";
     public static final String doorWindowStateApiString_iffullclosed = "/smartLab/iffullclosed";
     public static final String ifEmptyRoomApiString = "/smartLab/ifEmptyRoom";
+    public static final String TemperatureApiDouble = "/smartLab/temperature";
+
 
     /*
     * 下面的是和纸张剩余量检测相关的参数
@@ -31,6 +33,12 @@ public class Parameters {
     */
     public static int labFullClosed = 1; //1代表实验室门窗全部关闭
     public static final String entityId4FrontDoor = "binary_sensor.door_window_sensor_158d0001c0fa07";
+
+    /*
+    * 温度相关的传感器参数----测试用
+    * */
+    public static final String entityId4Temperature = "sensor.temperature_158d0001c1c050";
+    public static String currentTemperature = "0.0";
 
     /*
     * 下面的是和会议室是否有人相关的参数
