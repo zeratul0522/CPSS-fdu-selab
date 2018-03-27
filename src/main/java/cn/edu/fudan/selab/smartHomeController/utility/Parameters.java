@@ -27,12 +27,29 @@ public class Parameters {
     public static final int timeToExecuteTask = 30;//如果纸张不足的状态持续了这么多秒，就判定为不够
 
 
+    /**
+     * 两个人体传感器
+     */
+    public static final String entityId4FrontMeetingRoom = "binary_sensor.motion_sensor_158d0001abdfb4";
+    public static final String entityId4BehindMeetingRoom = "binary_sensor.motion_sensor_158d000e16557";
+
+
 
     /*
     * 下面的是和门窗关闭状态检测相关的参数
     */
-    public static int labFullClosed = 1; //1代表实验室门窗全部关闭
-    public static final String entityId4FrontDoor = "binary_sensor.door_window_sensor_158d0001c0fa07";
+    public static int labFullClosed = 10; //1代表实验室门窗全部关闭
+    public static final String entityId4FrontWindow_1 = "binary_sensor.door_window_sensor_158d0001c0fa07";
+    public static int frontWindow_1 = 10;
+    public static final String entityId4FrontWindow_2 = "binary_sensor.door_window_sensor_158d0001f49bc1";
+    public static int frontWindow_2 = 10;
+    public static int frontWindow = 10;
+    public static final String entityId4FrontDoor = "binary_sensor.door_window_sensor_158d0002026341";
+    public static int frontDoor = 10;
+    public static final String entityId4MeetingRome = "binary_sensor.door_window_sensor_158d0001f3976b";
+    public static int meetingRoom = 10;
+    public static final String entityId4ServerRoom = "binary_sensor.door_window_sensor_158d000202607d";
+    public static int serverRoom = 10;
 
     /*
     * 温度相关的传感器参数----测试用
