@@ -18,14 +18,16 @@ import java.util.Iterator;
  * @version 2018/1/25 下午9:02
  */
 public class IfEmptyRoomReasoning {
-
+/*
+方法里的system.out都可以删掉，单纯调试用；
+ */
     public static void execute(int delay){
 
         try{
             List<String> entityList = new ArrayList<String>();
             entityList.add(Parameters.entityId4OutsideSensor);
             entityList.add(Parameters.entityId4InsideSensor);
-            entityList.add(Parameters.entityId4LightSensor);
+            entityList.add(Parameters.entityId4MeetingRoomLightSensor);
             Iterator<String> it = entityList.iterator();
 
             JSONObject obj = null;
@@ -50,13 +52,15 @@ public class IfEmptyRoomReasoning {
                     inner = sdf.parse(String.valueOf(obj.get("last_changed")));// TODO: 2018/1/25 这里需要改成真实获得的传感器last_changed参数
                     System.out.println("里面的变化时间是：" + inner);
                 }
-                if (obj.get("entity_id").equals(Parameters.entityId4LightSensor))
+                if (obj.get("entity_id").equals(Parameters.entityId4MeetingRoomLightSensor))
                 {
                     lightValue = Double.parseDouble(String.valueOf(obj.get("state")));
                     System.out.println("光照是：" + lightValue);
                 }
             }
-
+/*
+这个if条件如果不懂的话勿改
+ */
             if((inner != null ? inner.getTime() : 0) < (outer != null ? outer.getTime() : 0)){
                 //有人出来
                 Double soundValue = 100.0;// TODO: 2018/1/26 这里也是随便填的数据
