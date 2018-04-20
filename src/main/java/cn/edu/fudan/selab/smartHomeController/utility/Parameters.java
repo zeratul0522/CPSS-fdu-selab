@@ -55,16 +55,25 @@ public class Parameters {
     * 温度相关的传感器参数----测试用
     * */
     public static final String entityId4Temperature = "sensor.temperature_158d0001c1c050";
+    public static final String entityId4Humidity = "sensor.humidity_158d0001c1c050";
     public static String currentTemperature = "0.0";
+    public static String currentHumidity = "0.0";
 
     /*
     * 下面的是和会议室是否有人相关的参数
     */
-    public static int somebodyAtRoom = 1; //
-    public static final String entityId4OutsideSensor = "";
-    public static final String entityId4InsideSensor = "";
+    public static int somebodyAtRoom = 10; //
+    public static final String entityId4OutsideSensor = "binary_sensor.motion_sensor_158d0001abdfb4";
+    public static final String entityId4InsideSensor = "binary_sensor.motion_sensor_158d0001e16557";
     public static final String entityId4SoundSensor = "";
-    public static final String entityId4LightSensor = "";
+    public static final String entityId4MeetingRoomLightSensor = "sensor.illumination_158d0001e16557";
     public static final double threshold4Sound = 50.0; // TODO: 2018/1/25 这里的两个阈值都是乱填的
-    public static final double threshold4Light = 50.0;
+    public static final double threshold4Light = 120; // TODO: 2018/4/4 声音还是乱填的，但是光照已经可用了
+
+    /*
+    实验室晚上最后一个走的时候关门关窗
+     */
+    //外屋的光照传感器，以光照为标准判断是不是最后一个人走了
+    public static final String entityId4LightSensor = "sensor.illumination_7811dcaf1e8a";
+    public static int nightDoorWindow = 10;
 }

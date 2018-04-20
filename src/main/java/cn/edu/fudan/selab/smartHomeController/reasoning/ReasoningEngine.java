@@ -17,6 +17,7 @@ public class ReasoningEngine {
         PaperStateReasoning.execute(79.0);// TODO: 2018/1/25 这里的参数是乱填的，后面改成真实获取的数值
         IfEmptyRoomReasoning.execute(0);
         TemperatureReasoning.execute(0.0);
+        IfEmptyRoomReasoning.execute(2000);
 
     }
 

@@ -33,6 +33,19 @@ public class DoorWindowStateController {
         JSONArray arr = new JSONArray();
         arr.add("labFullClosed");
         arr.add(Parameters.labFullClosed);
+        arr.add("FrontDoor");
+        arr.add(Parameters.frontDoor);
+        arr.add("FrontWindow");
+        arr.add(Parameters.frontWindow);
+        arr.add("MeetingRoom");
+        arr.add(Parameters.meetingRoom);
+        arr.add("ServerRoom");
+        arr.add(Parameters.serverRoom);
+        arr.add("nightDoorWindow");
+        arr.add(Parameters.nightDoorWindow);
+        /*
+        返回的string中的格式必须是callback(json),详见前台代码里ajax部分
+         */
         return "labFullClosed(" + arr.toString() + ")";
     }
 }

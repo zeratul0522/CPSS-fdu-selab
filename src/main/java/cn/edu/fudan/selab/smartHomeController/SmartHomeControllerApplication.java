@@ -20,6 +20,7 @@ public class SmartHomeControllerApplication {
         System.out.println("测试：实验室fullClosed状态 = " + Parameters.labFullClosed);
         System.out.println("测试：纸张状态 = " + Parameters.currentPaperState);
         System.out.println("实验室当前温度是：" + Parameters.currentTemperature);
+        System.out.println("会议室当前有人吗？：" + Parameters.somebodyAtRoom);
 
 		SpringApplication.run(SmartHomeControllerApplication.class, args);
 
