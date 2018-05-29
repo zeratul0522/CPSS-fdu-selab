@@ -1,5 +1,7 @@
 package cn.edu.fudan.selab.smartHomeController.utility;
 
+import java.util.Date;
+
 /**
  * @author Fan Zejun E-mail:fzj0522@outlook.com
  * @version 2018/1/24 下午9:17
@@ -50,6 +52,8 @@ public class Parameters {
     public static int meetingRoom = 10;
     public static final String entityId4ServerRoom = "binary_sensor.door_window_sensor_158d000202607d";
     public static int serverRoom = 10;
+    public static int OutsideSensor = 10;
+    public static int InsideSensor = 10;
 
     /*
     * 温度相关的传感器参数----测试用
@@ -76,4 +80,10 @@ public class Parameters {
     //外屋的光照传感器，以光照为标准判断是不是最后一个人走了
     public static final String entityId4LightSensor = "sensor.illumination_7811dcaf1e8a";
     public static int nightDoorWindow = 10;
+
+    public static Date inner = null;
+    public static Date outer = null;
+
+    public static double lightValue = 0.0;
+
 }
