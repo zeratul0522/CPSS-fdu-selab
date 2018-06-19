@@ -27,6 +27,7 @@ public class IfEmptyRoomController {
         /*
         返回的string中的格式必须是callback(json),详见前台代码里ajax部分
          */
+        System.out.println("somebodyAtRoom(" + arr.toString() + ")");
         return "somebodyAtRoom(" + arr.toString() + ")";
     }
 }

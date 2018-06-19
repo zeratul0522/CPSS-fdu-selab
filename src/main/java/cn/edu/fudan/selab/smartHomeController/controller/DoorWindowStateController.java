@@ -46,6 +46,7 @@ public class DoorWindowStateController {
         /*
         返回的string中的格式必须是callback(json),详见前台代码里ajax部分
          */
+        System.out.println("labFullClosed(" + arr.toString() + ")");
         return "labFullClosed(" + arr.toString() + ")";
     }
 }

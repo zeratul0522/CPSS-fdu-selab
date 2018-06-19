@@ -1,5 +1,9 @@
 package cn.edu.fudan.selab.smartHomeController.utility;
 
+import net.sf.json.JSONArray;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -17,6 +21,25 @@ public class Parameters {
     public static final String doorWindowStateApiString_iffullclosed = "/smartLab/iffullclosed";
     public static final String ifEmptyRoomApiString = "/smartLab/ifEmptyRoom";
     public static final String TemperatureApiDouble = "/smartLab/temperature";
+    public static final String heart = "/heartbeat";
+    public static final String is_boiled = "/boiled";
+    public static final String book_water = "/bookwater";
+    public static final String drink_water = "/drink";
+    public static final String who_first = "/first";
+    public static final String get_list = "/list";
+
+    public static Date heartbeat_date = new Date();
+
+    public static ArrayList<String> WaterList = new ArrayList<String>();
+
+
+    public static final SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSSSS");
+    public static final String Login = "/login";
+    public static final String Auto_login = "/autologin";
+    public static final String Default_name = "fdse";
+    public static final String Default_pwd = "fdse";
+    public static String Token = "";
+
 
 
     /*
